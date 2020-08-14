@@ -1152,6 +1152,12 @@ def account():
 @app.route("/sportsmansaccount")
 @login_required
 def spsaccount():
+    if session.get('role') == "coach":
+        base = "baseforaccaunt.html"
+    if session.get('role') == "":
+        base = "base2.html"
+    if session.get('role') == "sportsmen":
+        base = "baseforsporsman.html"
     account = session.get('id')
     articles = Article.query.order_by(Article.date.desc()).all()
     saved = Saved.query.filter_by(saved_login=session.get("login")).all()
@@ -1177,12 +1183,18 @@ def spsaccount():
     print(myfollow2)
 
     return render_template("oncesaved.html", user=account, articles=articles, myfollow=myfollow,
-                           follower=myfollow1, articles1=articles1, follower2=myfollow2, articles2=articles2)
+                           follower=myfollow1, articles1=articles1, follower2=myfollow2, articles2=articles2, base=base)
 
 
 @app.route("/savedweek")
 @login_required
 def savedweek():
+    if session.get('role') == "coach":
+        base = "baseforaccaunt.html"
+    if session.get('role') == "":
+        base = "base2.html"
+    if session.get('role') == "sportsmen":
+        base = "baseforsporsman.html"
     account = session.get('id')
     articles = Article.query.order_by(Article.date.desc()).all()
     saved = Saved.query.filter_by(saved_login=session.get("login")).all()
@@ -1208,13 +1220,21 @@ def savedweek():
     print(myfollow2)
 
     return render_template("weeksaved.html", user=account, articles=articles, myfollow=myfollow,
-                           follower=myfollow1, articles1=articles1, follower2=myfollow2, articles2=articles2)
+                           follower=myfollow1, articles1=articles1, follower2=myfollow2, articles2=articles2, base=base)
 
 
 
 @app.route("/savedmonth")
 @login_required
 def savedmonth():
+    print(session.get("role"))
+
+    if session.get('role') == "coach":
+        base = "baseforaccaunt.html"
+    if session.get('role') == "":
+        base = "base2.html"
+    if session.get('role') == "sportsmen":
+        base = "baseforsporsman.html"
     account = session.get('id')
     articles = Article.query.order_by(Article.date.desc()).all()
     saved = Saved.query.filter_by(saved_login=session.get("login")).all()
@@ -1240,7 +1260,7 @@ def savedmonth():
     print(myfollow2)
 
     return render_template("monthsaved.html", user=account, articles=articles, myfollow=myfollow,
-                           follower=myfollow1, articles1=articles1, follower2=myfollow2, articles2=articles2)
+                           follower=myfollow1, articles1=articles1, follower2=myfollow2, articles2=articles2, base=base)
 
 
 @app.route("/search", methods=['POST', 'GET'])
