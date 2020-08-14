@@ -1,0 +1,35 @@
+﻿{% extends 'baseforaccaunt.html' %}
+{% block content %}
+<div class="container">
+    
+    <form method="post">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Имя</label>
+            <input type="text" name="name" id="title" class="form-control"><br>
+            <label for="exampleFormControlInput1">Фамилия</label>
+            <input type="text" name="surname" id="surname" class="form-control"><br>
+
+            <label for="exampleFormControlInput1">Вид спорта (с большой буквы)</label>
+            <input type="text" name="sport" id="name" class="form-control"><br>
+
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Краткое описание</label>
+            <textarea name="intro" id="intro" class="form-control"></textarea><br>
+            <label for="exampleFormControlInput1">Полное описание</label>
+            <textarea name="text" id="text" class="form-control"></textarea><br>
+        </div>
+        <div class="form-group">
+            
+
+
+            <input type="submit" class="btn  btn-success " value="Отправить">
+
+
+            </div>
+
+    </form>
+
+
+</div>
+ {% endblock %}

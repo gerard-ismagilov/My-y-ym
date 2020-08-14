@@ -1,0 +1,48 @@
+﻿{% extends base %}
+
+ {% block content %}
+
+
+
+
+  <div class="row justify-content-md-center">
+
+        <div class="col-lg-10">
+            <div class="post">
+                <div class="card">
+                    <div class="card-header">
+                        {{account.login}}
+                    </div>
+                    <div class="card-body">
+
+                        <p class="card-text">{{account.name}} {{account.surname}} </p>
+                        <p class="card-text">Спорт: {{account.sport}} </p>
+
+
+                        <div class="card-body">
+
+                            <p class="card-text">{{ account.intro }}</p>
+                            <hr>
+                            <p class="card-text">{{ account.text }}</p>
+                            <hr>
+
+                            </div>
+                        <div class="post-info">
+
+                            <div class="post-read">
+                                <a href="subscribe/{{ account.id}}" class="btn btn-sm btn-danger">Подписаться</a>
+                            </div>
+
+                        </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+ </div>
+
+
+{% endblock %}
+

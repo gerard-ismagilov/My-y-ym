@@ -1,0 +1,85 @@
+{% extends base %}
+ {% block content %}
+
+
+
+
+    <!-- ChoseUs Section Begin -->
+
+    <!-- ChoseUs Section End -->
+
+    <!-- Classes Section Begin -->
+    <section class="classes-section spad">
+        <div class="container">
+
+
+            <div class="row">
+
+
+                <div class="col-lg-8 p-0">
+                    <div class="blog-item">
+
+                        <div class="bi-text">
+                            <h5><a href="./blog-details.html">{{articles.title}}</a></h5>
+                            <ul>
+                                <li>{{ articles.creators }}</li>
+                                <li>{{ articles.date.date() }}</li>
+                                <li>{{ articles.type }}</li>
+
+                            </ul>
+                            <p>{{ articles.intro }}</p>
+                            <h5><font color="red">День 1</font></h5>
+                            <p>{{ articles.text1 }}</p>
+                            <h5><font color="red">День 2</font></h5>
+                            <p>{{ articles.text2 }}</p>
+                            <h5><font color="red">День 3</font></h5>
+                            <p>{{ articles.text3 }}</p>
+                            <h5><font color="red">День 4</font></h5>
+                            <p>{{ articles.text4 }}</p>
+                            <h5><font color="red">День 5</font></h5>
+                            <p>{{ articles.text5 }}</p>
+                            <h5><font color="red">День 6</font></h5>
+                            <p>{{ articles.text6 }}</p>
+                            <h5><font color="red">День 7</font></h5>
+                            <p>{{ articles.text7 }}</p>
+<a href="/weektraining" class="primary-btn">Закончить просмотр</a>
+                            {% if articles.id in follower %}
+
+                                <a href="/reject/{{ articles.id }}" class="btn btn-sm btn-secondary">Удалить из добавленых</a>
+
+                            {% else %}
+
+                                <a href="/offer/{{ articles.id }}" class="btn btn-sm btn-secondary">Добавить тренировку</a>
+
+                            {% endif %}
+                        </div>
+
+                    </div>
+
+
+        </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- ChoseUs Section End -->
+
+    <!-- Banner Section Begin -->
+
+    <!-- Banner Section End -->
+
+    <!-- Pricing Section Begin -->
+
+    <!-- Pricing Section End -->
+
+    <!-- Gallery Section Begin -->
+
+    <!-- Gallery Section End -->
+
+    <!-- Team Section Begin -->
+
+    <!-- Team Section End -->
+
+    <!-- Get In Touch Section Begin -->
+{% endblock %}

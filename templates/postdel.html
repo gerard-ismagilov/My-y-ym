@@ -1,0 +1,34 @@
+{% extends 'base.html'%}
+ {% block content %}
+
+
+
+<h1>Все тренировки</h1>
+        {% for element in articles %}
+<div class="row justify-content-md-center">
+    <div class="col-lg-10">
+        <div class="post">
+            <div class="card">
+                <div class="card-header">
+                    {{element.title}}
+                </div>
+                <div class="card-body">
+
+                    <p class="card-text">{{element.intro}}</p>
+                    <hr>
+                    <div class="post-info">
+                        <span class="post-date">{{element.date.date()}}</span>
+                        <div class="post-read">
+                            <a href="/treaningdel/{{ element.id }}" class="btn btn-sm btn-warning">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        {% endfor %}
+
+    </div>
+{% endblock %}
+

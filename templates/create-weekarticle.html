@@ -1,0 +1,57 @@
+{% extends 'baseforaccaunt.html' %}
+{% block content %}
+
+        <div class="card-header">
+            Напишите о своей тренировке
+        </div>
+        <form method="post">
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Заголовок</label>
+                <input type="text" name="title" id="title" class="form-control"><br>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Краткое описание</label>
+                <textarea name="intro" id="intro" class="form-control"></textarea><br>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Полное описание тренировки для первого дня</label>
+                <textarea name="text1" id="text" class="form-control"></textarea><br>
+                <hr/>
+                <label for="exampleFormControlInput1">Полное описание тренировки для второго дня</label>
+                <textarea name="text2" id="text" class="form-control"></textarea><br>
+                <hr/>
+                <label for="exampleFormControlInput1">Полное описание тренировки для третьего дня</label>
+                <textarea name="text3" id="text" class="form-control"></textarea><br>
+                <hr/>
+                <label for="exampleFormControlInput1">Полное описание тренировки для четвертого дня</label>
+                <textarea name="text4" id="text" class="form-control"></textarea><br>
+                <hr/>
+                <label for="exampleFormControlInput1">Полное описание тренировки для пятого дня</label>
+                <textarea name="text5" id="text" class="form-control"></textarea><br>
+                <hr/>
+                <label for="exampleFormControlInput1">Полное описание тренировки для шестого дня</label>
+                <textarea name="text6" id="text" class="form-control"></textarea><br>
+                <hr/>
+
+                <label for="exampleFormControlInput1">Полное описание тренировки для седьмого дня</label>
+                <textarea name="text7" id="text" class="form-control"></textarea><br>
+            </div>
+             <div class="form-group">
+                 <input type="radio" name="who" id ="coach" value="free" /> Бесплатная </br>
+                 <input type="radio" name="who" id ="sportsmen" value="paid" /> Платная </br>
+             </div>
+    <div class="form-group">
+                <label for="exampleFormControlInput1" >Если ваша тренировка платная, укажите цену в рублях:</label>
+                <input  type="number" name="cost"   size="15" maxlength="20" ><br>
+            </div>
+
+            <input type="submit" class="btn  btn-success " value="Отправить">
+
+
+
+
+        </form>
+
+
+    </div>
+ {% endblock %}

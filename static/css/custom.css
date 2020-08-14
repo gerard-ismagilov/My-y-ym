@@ -1,0 +1,30 @@
+nav {
+  margin-bottom: 25px;
+}
+
+.post-read {
+  float: right;
+}
+
+.post-date {
+  float: left;
+}
+
+.post {
+  margin-bottom: 25px;
+}
+
+.pagg {
+  margin: 0 auto;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+}
+    li
+
+{
+    padding: 0;
+}

@@ -1,0 +1,38 @@
+{% extends 'baseforsporsman.html'%}
+ {% block content %}
+
+    <div class="row justify-content-md-center">
+        <div class="col-lg-10">
+            <iframe  width=" 330" height=" 240" src="https://www.youtube.com/embed/5ieCRa2eW0Y"
+                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+
+        {% for element in articles %}
+<div class="row justify-content-md-center">
+    <div class="col-lg-10">
+        <div class="post">
+            <div class="card">
+                <div class="card-header">
+                    {{element.title}}
+                </div>
+                <div class="card-body">
+
+                    <p class="card-text">{{element.text}}</p>
+                    <hr>
+                    <div class="post-info">
+                        <span class="post-date">{{element.date.date()}}</span>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        {% endfor %}
+
+   
+{% endblock %}

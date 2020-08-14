@@ -1,0 +1,207 @@
+{% extends base %}
+
+ {% block content %}
+<section class="classes-section spad">
+        <div class="container">
+        <<div class="row">
+
+
+                <div class="col-lg-8 p-0">
+                    <div class="blog-item">
+
+                        <div class="bi-text">
+                            <h5><a href="./blog-details.html">{{account.login}}</a></h5>
+
+
+
+                            <p>Имя: {{account.name}} {{account.surname}}</p></br>
+                            <p>Спорт: {{account.sport}}</p></br>
+                            <p>О себе: </p></br>
+                            <p >{{account.intro}} </p></br>
+                            <p>Полная информация</p></br>
+                            <p>{{account.text}}</p></br>
+
+
+
+                            {% if account.login in follower %}
+
+
+                                <a href="/subscribedel/{{ account.id }}" class="btn btn-sm btn-secondary">Отписаться</a></br>
+
+
+                            {% else %}
+
+                                <a href="subscribe/{{ account.id }}" class="btn btn-sm btn-danger">Подписаться</a></br>
+
+                            {% endif %}
+                            </br>
+                        </div>
+
+                    </div>
+
+
+        </div>
+            </div>
+
+        </div>
+<hr color="ffffff">
+</br>
+<div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Программы на месяц</span>
+
+
+                    </div>
+                </div>
+            </div>
+            {% for element in articles2 %}
+            <div class="row">
+
+
+                <div class="col-lg-8 p-0">
+                    <div class="blog-item">
+
+                        <div class="bi-text">
+                            <h5><a href="./blog-details.html">{{element.title}}</a></h5>
+                            <ul>
+                                <li>{{ element.creators }}</li>
+                                <li>{{ element.date.date() }}</li>
+                                <li>{{ element.type }}</li>
+
+                            </ul>
+                            <p>{{ element.intro }}</p>
+<a href="/XXLtreaning/{{ element.id }}" class="primary-btn">Подробнее</a>
+                            {% if element.id in follower2 %}
+
+                                <a href="/XXLreject/{{ element.id }}" class="btn btn-sm btn-secondary">Удалить из добавленых</a>
+
+                            {% else %}
+
+                                <a href="/XXLoffer/{{ element.id }}" class="btn btn-sm btn-secondary">Добавить тренировку</a>
+
+                            {% endif %}
+                        </div>
+
+                    </div>
+
+
+        </div>
+            </div>
+
+            {% endfor %}
+        </div>
+
+       <hr color="ffffff">
+<div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Программы тренировок на неделю</span>
+
+
+
+                    </div>
+                </div>
+            </div>
+            {% for element in articles1 %}
+            <div class="row">
+
+
+                <div class="col-lg-8 p-0">
+                    <div class="blog-item">
+
+                        <div class="bi-text">
+                            <h5><a href="./blog-details.html">{{element.title}}</a></h5>
+                            <ul>
+                                <li>{{ element.creators }}</li>
+                                <li>{{ element.date.date() }}</li>
+                                <li>{{ element.type }}</li>
+
+                            </ul>
+
+
+                            <p>{{ element.intro }}</p>
+<a href="/weektreaning/{{ element.id }}" class="primary-btn">Подробнее</a>
+                            {% if element.id in follower %}
+
+                                <a href="/weekreject/{{ element.id }}" class="btn btn-sm btn-secondary">Удалить из добавленых</a>
+
+                            {% else %}
+
+                                <a href="/weekoffer/{{ element.id }}" class="btn btn-sm btn-secondary">Добавить тренировку</a>
+
+                            {% endif %}
+                        </div>
+
+                    </div>
+
+
+        </div>
+            </div>
+
+            {% endfor %}
+        </div>
+<hr color="ffffff">
+<div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Одноразовая тренировка</span>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            {% for element in articles %}
+            <div class="row">
+
+
+                <div class="col-lg-8 p-0">
+                    <div class="blog-item">
+
+                        <div class="bi-text">
+                            <h5><a href="./blog-details.html">{{element.title}}</a></h5>
+                            <ul>
+                                <li>{{ element.creators }}</li>
+                                <li>{{ element.date.date() }}</li>
+                                <li>{{ element.type }}</li>
+
+                            </ul>
+
+
+                            <p>{{ element.intro }}</p>
+<a href="/treaning/{{ element.id }}" class="primary-btn">Подробнее</a>
+                            {% if element.id in follower %}
+
+                                <a href="/reject/{{ element.id }}" class="btn btn-sm btn-secondary">Удалить из добавленых</a>
+
+                            {% else %}
+
+                                <a href="/offer/{{ element.id }}" class="btn btn-sm btn-secondary">Добавить тренировку</a>
+
+                            {% endif %}
+                        </div>
+
+                    </div>
+
+
+        </div>
+            </div>
+
+            {% endfor %}
+        </div>
+<hr color="ffffff">
+</br>
+<hr></hr>
+
+ </div>
+
+<!---->
+</section>
+{% endblock %}
+

@@ -1,0 +1,31 @@
+﻿{% extends 'baseforaccaunt.html' %}
+{% block content %}
+
+
+
+            <div class="card-header">
+                Напишите новость
+            </div>
+            <form method="post">
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Заголовок</label>
+                    <input type="text" name="title" id="title" class="form-control"><br>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlInput1">Полное описание</label>
+                    <textarea name="text" id="text" class="form-control"></textarea><br>
+                    
+                </div>
+
+                <input type="submit" class="btn  btn-success " value="Отправить">
+
+
+
+
+            </form>
+
+
+        </div>
+
+{% endblock %}

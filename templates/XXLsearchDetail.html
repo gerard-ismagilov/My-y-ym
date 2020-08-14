@@ -1,0 +1,135 @@
+{% extends base %}
+
+
+ {% block content %}
+
+
+
+
+    <!-- ChoseUs Section Begin -->
+
+    <!-- ChoseUs Section End -->
+
+    <!-- Classes Section Begin -->
+    <section class="classes-section spad">
+        <div class="container">
+
+
+            <div class="row">
+
+
+                <div class="col-lg-8 p-0">
+                    <div class="blog-item">
+
+                        <div class="bi-text">
+                            <h5><a href="./blog-details.html">{{articles.title}}</a></h5>
+                            <ul>
+                                <li>{{ articles.creators }}</li>
+                                <li>{{ articles.date.date() }}</li>
+                                <li>{{ articles.type }}</li>
+
+                            </ul>
+                            <p>{{ articles.intro }}</p>
+                            <h5><font color="red">День 1</font></h5>
+                            <p>{{ articles.text1 }}</p>
+                            <h5><font color="red">День 2</font></h5>
+                            <p>{{ articles.text2 }}</p>
+                            <h5><font color="red">День 3</font></h5>
+                            <p>{{ articles.text3 }}</p>
+                            <h5><font color="red">День 4</font></h5>
+                            <p>{{ articles.text4 }}</p>
+                            <h5><font color="red">День 5</font></h5>
+                            <p>{{ articles.text5 }}</p>
+                            <h5><font color="red">День 6</font></h5>
+                            <p>{{ articles.text6 }}</p>
+                            <h5><font color="red">День 7</font></h5>
+                            <p>{{ articles.text7 }}</p>
+                            <h5><font color="red">День 8</font></h5>
+                            <p>{{ articles.text8 }}</p>
+                            <h5><font color="red">День 9</font></h5>
+                            <p>{{ articles.text9 }}</p>
+                            <h5><font color="red">День 10</font></h5>
+                            <p>{{ articles.text10 }}</p>
+                            <h5><font color="red">День 11</font></h5>
+                            <p>{{ articles.text11 }}</p>
+                            <h5><font color="red">День 12</font></h5>
+                            <p>{{ articles.text12 }}</p>
+                            <h5><font color="red">День 13</font></h5>
+                            <p>{{ articles.text13 }}</p>
+                            <h5><font color="red">День 14</font></h5>
+                            <p>{{ articles.text14 }}</p>
+                            <h5><font color="red">День 15</font></h5>
+                            <p>{{ articles.text15 }}</p>
+                            <h5><font color="red">День 16</font></h5>
+                            <p>{{ articles.text16 }}</p>
+                            <h5><font color="red">День 17</font></h5>
+                            <p>{{ articles.text17 }}</p>
+                            <h5><font color="red">День 18</font></h5>
+                            <p>{{ articles.text18 }}</p>
+                            <h5><font color="red">День 19</font></h5>
+                            <p>{{ articles.text19 }}</p>
+                            <h5><font color="red">День 20</font></h5>
+                            <p>{{ articles.text20 }}</p>
+                            <h5><font color="red">День 21</font></h5>
+                            <p>{{ articles.text21 }}</p>
+                            <h5><font color="red">День 22</font></h5>
+                            <p>{{ articles.text22 }}</p>
+                            <h5><font color="red">День 23</font></h5>
+                            <p>{{ articles.text23 }}</p>
+                            <h5><font color="red">День 24</font></h5>
+                            <p>{{ articles.text24 }}</p>
+                            <h5><font color="red">День 25</font></h5>
+                            <p>{{ articles.text25 }}</p>
+                            <h5><font color="red">День 26</font></h5>
+                            <p>{{ articles.text26 }}</p>
+                            <h5><font color="red">День 27</font></h5>
+                            <p>{{ articles.text27 }}</p>
+                            <h5><font color="red">День 28</font></h5>
+                            <p>{{ articles.text28 }}</p>
+                            <h5><font color="red">День 29</font></h5>
+                            <p>{{ articles.text29 }}</p>
+                            <h5><font color="red">День 30</font></h5>
+                            <p>{{ articles.text30 }}</p>
+                            <h5><font color="red">День 31</font></h5>
+                            <p>{{ articles.text31 }}</p>
+<a href="/XXLtraining" class="primary-btn">Закончить просмотр</a>
+                            {% if articles.id in follower %}
+
+                                <a href="/reject/{{ articles.id }}" class="btn btn-sm btn-secondary">Удалить из добавленых</a>
+
+                            {% else %}
+
+                                <a href="/offer/{{ articles.id }}" class="btn btn-sm btn-secondary">Добавить тренировку</a>
+
+                            {% endif %}
+                        </div>
+
+                    </div>
+
+
+        </div>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- ChoseUs Section End -->
+
+    <!-- Banner Section Begin -->
+
+    <!-- Banner Section End -->
+
+    <!-- Pricing Section Begin -->
+
+    <!-- Pricing Section End -->
+
+    <!-- Gallery Section Begin -->
+
+    <!-- Gallery Section End -->
+
+    <!-- Team Section Begin -->
+
+    <!-- Team Section End -->
+
+    <!-- Get In Touch Section Begin -->
+{% endblock %}

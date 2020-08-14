@@ -1,0 +1,53 @@
+﻿{% extends 'base.html' %}
+{% block content %}
+
+
+    <div class="gettouch-section" align="center">
+        <div class="col-lg-6" align="center">
+            <div class="post">
+                <div class="card">
+                    <div class="card-header  bg-dark" ><font color = "FFFFFF">
+                        Регистрация
+                    </font></div>
+                    <div class="card-body">
+                        <div class="row justify-content-md-center">
+                            <div class="col-lg-10">
+                                <form method="post">
+                                    {% with messages = get_flashed_messages() %}
+                                    {% if messages %}
+                                    <ul class=flashes>
+                                        {% for message in messages %}
+                                        <li>{{ messages }} </li>
+                                        {% endfor %}
+                                    </ul>
+                                    {% endif %}
+                                    {% endwith %}
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Электронная почта (Логин)</label>
+                                        <input type="text" class="form-control" name="email" id="email" placeholder="name@example.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Пароль</label>
+                                        <input type="password" class="form-control" name="password" id="pass" placeholder="********">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Повтор пароля</label>
+                                        <input type="password" class="form-control" name="password2" id="pass1" placeholder="********">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="radio" name="who" id ="coach" value="coach" /> Тренер</br>
+                                        <input type="radio" name="who" id ="sportsmen" value="sportsmen" /> Спортсмен</br>
+                                    </div>
+                                        <input type="submit" class="btn btn-success" value="Зарегестрироваться">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

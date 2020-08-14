@@ -1,0 +1,160 @@
+{% extends 'baseforsporsman.html'%}
+ {% block content %}
+
+<h3 — align="center"><font color="007bff">Мои добавленые тренировки</font></h3>
+<hr></hr>
+</br>
+<h3 — align="center"><font color="007bff">Программы на месяц</font></h3>
+<hr></hr>
+</br>
+{% for element in articles2 %}
+
+{% if element.id in follower2 %}
+<div class="row justify-content-md-center">
+    <div class="col-lg-10">
+        <div class="post">
+            <div class="card">
+                <div class="card-header">
+                    {{element.title}} / Тренер:{{ element.creators }} / Тип: {{ element.type }}
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{element.intro}}</p>
+                    <hr>
+                    <div class="post-info">
+                        <span class="post-date">{{element.date.date()}}</span>
+
+                        <div class="post-info">
+                            <div class="post-read">
+                                <a href="/XXLtreaning/{{ element.id }}" class="btn btn-sm btn-info">Подробнее</a>
+                                </br>
+                            </div>
+                            </br>
+                            <div class="post-read">
+                                <a href="/XXLreject/{{ element.id }}" class="btn btn-sm btn-secondary">Удалить из добавленых</a>
+                            </div>
+
+                            </br>
+
+                             </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                            {% endif %}
+
+
+
+
+
+
+
+        {% endfor %}
+<h3 — align="center"><font color="007bff">Недельные</font></h3>
+</br>
+<hr></hr>
+{% for element in articles1 %}
+
+{% if element.id in follower %}
+<div class="row justify-content-md-center">
+    <div class="col-lg-10">
+        <div class="post">
+            <div class="card">
+                <div class="card-header">
+                    {{element.title}} / Тренер:{{ element.creators }} / Тип: {{ element.type }}
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{element.intro}}</p>
+                    <hr>
+                    <div class="post-info">
+                        <span class="post-date">{{element.date.date()}}</span>
+
+                        <div class="post-info">
+                            <div class="post-read">
+                                <a href="/weektreaning/{{ element.id }}" class="btn btn-sm btn-info">Подробнее</a>
+                                </br>
+                            </div>
+                            </br>
+                            <div class="post-read">
+                                <a href="/weekreject/{{ element.id }}" class="btn btn-sm btn-secondary">Удалить из добавленых</a>
+                            </div>
+
+
+                            </br>
+
+                             </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                            {% endif %}
+
+
+
+
+
+
+
+        {% endfor %}
+
+
+<h3 — align="center"><font color="007bff">Одинарные</font></h3>
+
+<hr></hr>
+</br>
+{% for element in articles %}
+{% if element.id in myfollow %}
+<div class="row justify-content-md-center">
+    <div class="col-lg-10">
+        <div class="post">
+            <div class="card">
+                <div class="card-header">
+                    {{element.title}} / Тренер:{{ element.creators }} / Тип: {{ element.type }}
+                </div>
+                <div class="card-body">
+                    <p class="card-text">{{element.intro}}</p>
+                    <hr>
+                    <div class="post-info">
+                        <span class="post-date">{{element.date.date()}}</span>
+
+                        <div class="post-info">
+                            <div class="post-read">
+                                <a href="/treaning/{{ element.id }}" class="btn btn-sm btn-info">Подробнее</a>
+                                </br>
+                            </div>
+                            </br>
+                            <div class="post-read">
+                                <a href="/reject/{{ element.id }}" class="btn btn-sm btn-secondary">Удалить из добавленых</a>
+                            </div>
+
+                            </br>
+
+                             </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+                            {% endif %}
+{% endfor %}
+</br>
+<hr></hr>
+
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
