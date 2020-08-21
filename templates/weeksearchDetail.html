@@ -43,13 +43,13 @@
                             <h5><font color="red">День 7</font></h5>
                             <p>{{ articles.text7 }}</p>
 <a href="/weektraining" class="primary-btn">Закончить просмотр</a>
-                            {% if articles.id in follower %}
+                            {% if element.id in follower %}
 
-                                <a href="/reject/{{ articles.id }}" class="btn btn-sm btn-secondary">Удалить из добавленых</a>
+                                <a href="/weekreject/{{ element.id }}" class="btn btn-sm btn-secondary">Удалить из добавленых</a>
 
                             {% else %}
 
-                                <a href="/offer/{{ articles.id }}" class="btn btn-sm btn-secondary">Добавить тренировку</a>
+                                <a href="/weekoffer/{{ element.id }}" class="btn btn-sm btn-secondary">Добавить тренировку</a>
 
                             {% endif %}
                         </div>

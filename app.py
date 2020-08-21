@@ -984,7 +984,11 @@ def treansearh(id):
     session['searchofcoach'] = id
     return redirect("/treanersearchid")
 
-
+@app.route("/treanersearchlog/<string:log>")
+def treansearhlog(log):
+    acc = User.query.filter_by(login=log).first()
+    session['searchofcoach'] = acc.id
+    return redirect("/treanersearchid")
 
 
 
@@ -1318,7 +1322,7 @@ def searchf(id):
     if session.get('role') == "coach":
         base = "baseforaccaunt.html"
     if session.get('role') == "":
-        base = "base2.html"
+        base = "base.html"
     if session.get('role') == "sportsmen":
         base = "baseforsporsman.html"
     if request.method == 'POST':
@@ -1352,7 +1356,11 @@ def searchf(id):
             return "Такого тренера нет"
     else:
 
-        return render_template("search.html", base="base2.html")
+        return render_template("search.html", base="base.html")
+
+
+
+
 
 
 
@@ -1372,9 +1380,20 @@ def aindex():
 
 video = []
 @app.route("/motivation")
-def mativation():
+def motivation():
+    if session.get('role') == "coach":
+        base = "baseforaccaunt.html"
+    if session.get('role') == "":
+        base = "base.html"
+    if session.get('role') == "sportsmen":
+        base = "baseforsporsman.html"
 
-    return render_template("motivation.html", video=video)
+    else:
+        return render_template("motivation.html", base="base.html")
+
+
+
+    return render_template("motivation.html", base=base)
 
 if __name__ == '__main__':
     import os

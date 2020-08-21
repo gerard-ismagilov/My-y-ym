@@ -95,11 +95,11 @@
 <a href="/XXLtraining" class="primary-btn">Закончить просмотр</a>
                             {% if articles.id in follower %}
 
-                                <a href="/reject/{{ articles.id }}" class="btn btn-sm btn-secondary">Удалить из добавленых</a>
+                                <a href="/XXLreject/{{ articles.id }}" class="btn btn-sm btn-secondary">Удалить из добавленых</a>
 
                             {% else %}
 
-                                <a href="/offer/{{ articles.id }}" class="btn btn-sm btn-secondary">Добавить тренировку</a>
+                                <a href="/XXLoffer/{{ articles.id }}" class="btn btn-sm btn-secondary">Добавить тренировку</a>
 
                             {% endif %}
                         </div>
