@@ -325,13 +325,15 @@ ol {
 -----------------------*/
 
 .header-section {
-	position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
 	width: 100%;
+	height: 300px;
 	padding: 0 15px;
-	padding-top: 55px;
+	padding-top: 35px;
 	z-index: 99;
+
 }
 
 .logo a {
@@ -357,7 +359,7 @@ ol {
 	width: 180px;
 	background: #252525;
 	z-index: 99;
-	text-align: center;
+	text-align: left;
 	padding: 13px 0 20px;
 	opacity: 0;
 	visibility: hidden;
@@ -1243,12 +1245,12 @@ ol {
 -----------------------*/
 
 .breadcrumb-section {
-	height: 500px;
+	height: 300px;
 	padding-top: 230px;
 }
 
 .breadcrumb-text h2 {
-	font-size: 60px;
+	font-size: 50px;
 	color: #ffffff;
 	font-weight: 600;
 	text-transform: uppercase;

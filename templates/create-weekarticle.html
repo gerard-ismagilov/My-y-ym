@@ -1,6 +1,8 @@
 {% extends 'baseforaccaunt.html' %}
 {% block content %}
+<div class="container">
 
+    <form method="post">
         <div class="card-header">
             Напишите о своей тренировке
         </div>
@@ -10,33 +12,58 @@
                 <input type="text" name="title" id="title" class="form-control"><br>
             </div>
             <div class="form-group">
+                <label for="exampleFormControlInput1">Ссылка на видео о программе</label>
+                <input type="text" name="linkintro" id="linkintro" class="form-control"><br>
                 <label for="exampleFormControlInput1">Краткое описание</label>
                 <textarea name="intro" id="intro" class="form-control"></textarea><br>
             </div>
             <div class="form-group">
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 1</label>
+                <input type="text" name="link1" id="link1" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для первого дня</label>
                 <textarea name="text1" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 2</label>
+                <input type="text" name="link2" id="link2" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для второго дня</label>
                 <textarea name="text2" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 3</label>
+                <input type="text" name="link3" id="link3" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для третьего дня</label>
                 <textarea name="text3" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 4</label>
+                <input type="text" name="link4" id="link4" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для четвертого дня</label>
                 <textarea name="text4" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 5</label>
+                <input type="text" name="link5" id="link5" class="form-control"><br>
+
                 <label for="exampleFormControlInput1">Полное описание тренировки для пятого дня</label>
                 <textarea name="text5" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 6</label>
+                <input type="text" name="link6" id="link6" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для шестого дня</label>
                 <textarea name="text6" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 7</label>
+                <input type="text" name="link7" id="link7" class="form-control"><br>
 
                 <label for="exampleFormControlInput1">Полное описание тренировки для седьмого дня</label>
                 <textarea name="text7" id="text" class="form-control"></textarea><br>
             </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Укажите уровень сложности</label><br>
+                 <input type="radio" name="level" id ="easy" value="Легко" /> Легко </br>
+                 <input type="radio" name="level" id ="middle" value="Средний уровень" /> Средне </br>
+                <input type="radio" name="level" id ="hard" value="Сложно" /> Сложно </br>
+             </div>
+            </hr>
              <div class="form-group">
+                 <label for="exampleFormControlInput1">Укажите тип</label><br>
                  <input type="radio" name="who" id ="coach" value="free" /> Бесплатная </br>
                  <input type="radio" name="who" id ="sportsmen" value="paid" /> Платная </br>
              </div>
@@ -54,4 +81,5 @@
 
 
     </div>
+
  {% endblock %}

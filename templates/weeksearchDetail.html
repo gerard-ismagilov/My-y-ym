@@ -27,20 +27,44 @@
                                 <li>{{ articles.type }}</li>
 
                             </ul>
+                            {% if articles.link != "https://www.youtube.com/embed/" %}
+                            <iframe width="360" height="215" src="{{ articles.linkintro }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                             {% endif %}
                             <p>{{ articles.intro }}</p>
                             <h5><font color="red">День 1</font></h5>
+                            {% if articles.link1 != "https://www.youtube.com/embed/" %}
+                            <iframe width="360" height="215" src="{{ articles.link1 }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                             {% endif %}
                             <p>{{ articles.text1 }}</p>
                             <h5><font color="red">День 2</font></h5>
+                            {% if articles.link2 != "https://www.youtube.com/embed/" %}
+                            <iframe width="360" height="215" src="{{ articles.link2 }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                             {% endif %}
                             <p>{{ articles.text2 }}</p>
                             <h5><font color="red">День 3</font></h5>
+                            {% if articles.link3 != "https://www.youtube.com/embed/" %}
+                            <iframe width="360" height="215" src="{{ articles.link3 }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                             {% endif %}
                             <p>{{ articles.text3 }}</p>
                             <h5><font color="red">День 4</font></h5>
+                            {% if articles.link4 != "https://www.youtube.com/embed/" %}
+                            <iframe width="360" height="215" src="{{ articles.link4 }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                             {% endif %}
                             <p>{{ articles.text4 }}</p>
                             <h5><font color="red">День 5</font></h5>
+                            {% if articles.link5 != "https://www.youtube.com/embed/" %}
+                            <iframe width="360" height="215" src="{{ articles.link5 }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                             {% endif %}
                             <p>{{ articles.text5 }}</p>
                             <h5><font color="red">День 6</font></h5>
+                            {% if articles.link6 != "https://www.youtube.com/embed/" %}
+                            <iframe width="360" height="215" src="{{ articles.link6 }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                             {% endif %}
                             <p>{{ articles.text6 }}</p>
                             <h5><font color="red">День 7</font></h5>
+                            {% if articles.link7 != "https://www.youtube.com/embed/" %}
+                            <iframe width="360" height="215" src="{{ articles.link7 }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                             {% endif %}
                             <p>{{ articles.text7 }}</p>
 <a href="/weektraining" class="primary-btn">Закончить просмотр</a>
                             {% if element.id in follower %}

@@ -1,0 +1,51 @@
+{% extends base %}
+ {% block content %}
+
+
+
+
+
+    <section class="classes-section spad">
+        <div class="container">
+
+
+            <div class="row">
+
+
+                <div class="col-lg-8 p-0">
+                    <div class="blog-item">
+
+                        <div class="bi-text">
+                            <h5><a href="./blog-details.html">{{articles.title}}</a></h5>
+                            <ul>
+                                <li>{{ articles.creators }}</li>
+                                <li>{{ articles.date.date() }}</li>
+                                <li>{{ articles.type }}</li>
+
+                            </ul>
+                            <p>{{ articles.intro }}</p>
+                            <hr/>
+                            <p>{{ articles.text }}</p>
+<a href="/treaning" class="primary-btn">Закончить просмотр</a>
+                            {% if articles.id in follower %}
+
+                                <a href="/reject/{{ articles.id }}" class="btn btn-sm btn-secondary">Удалить из добавленых</a>
+
+                            {% else %}
+
+                                <a href="/offer/{{ articles.id }}" class="btn btn-sm btn-secondary">Добавить тренировку</a>
+
+                            {% endif %}
+                        </div>
+
+                    </div>
+
+
+        </div>
+            </div>
+
+
+        </div>
+    </section>
+
+{% endblock %}

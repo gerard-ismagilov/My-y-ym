@@ -1,11 +1,15 @@
 {% extends 'baseforaccaunt.html' %}
 {% block content %}
+<div class="container">
 
+    <form method="post">
         <div class="card-header">
             Напишите о своей тренировке
         </div>
         <form method="post">
             <div class="form-group">
+                <label for="exampleFormControlInput1">Ссылка на видео о программе</label>
+                <input type="text" name="linkintro" id="linkintro" class="form-control"><br>
                 <label for="exampleFormControlInput1">Заголовок</label>
                 <input type="text" name="title" id="title" class="form-control"><br>
             </div>
@@ -14,106 +18,177 @@
                 <textarea name="intro" id="intro" class="form-control"></textarea><br>
             </div>
             <div class="form-group">
+                 <label for="exampleFormControlInput1">Ссылка на видео для дня 1</label>
+                <input type="text" name="link1" id="link1" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для первого дня</label>
                 <textarea name="text1" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 2</label>
+                <input type="text" name="link2" id="link2" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для второго дня</label>
                 <textarea name="text2" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 3</label>
+                <input type="text" name="link3" id="link3" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для третьего дня</label>
                 <textarea name="text3" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 4</label>
+                <input type="text" name="link4" id="link4" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для четвертого дня</label>
                 <textarea name="text4" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 5</label>
+                <input type="text" name="link5" id="link5" class="form-control"><br>
+
                 <label for="exampleFormControlInput1">Полное описание тренировки для пятого дня</label>
                 <textarea name="text5" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 6</label>
+                <input type="text" name="link6" id="link6" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для шестого дня</label>
                 <textarea name="text6" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 7</label>
+                <input type="text" name="link7" id="link7" class="form-control"><br>
 
                 <label for="exampleFormControlInput1">Полное описание тренировки для седьмого дня</label>
                 <textarea name="text7" id="text" class="form-control"></textarea><br>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 8</label>
+                <input type="text" name="link8" id="link8" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для восьмого дня</label>
                 <textarea name="text8" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 9</label>
+                <input type="text" name="link9" id="link9" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для девятого дня</label>
                 <textarea name="text9" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 10</label>
+                <input type="text" name="link10" id="link10" class="form-control"><br>
 
                 <label for="exampleFormControlInput1">Полное описание тренировки для десятого дня</label>
                 <textarea name="text10" id="text" class="form-control"></textarea><br>
                 </hr>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 11</label>
+                <input type="text" name="link11" id="link11" class="form-control"><br>
 
 
                 <label for="exampleFormControlInput1">Полное описание тренировки для одинадцатого дня</label>
                 <textarea name="text11" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 12</label>
+                <input type="text" name="link12" id="link12" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для двенадцатого дня</label>
                 <textarea name="text12" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 13</label>
+                <input type="text" name="link13" id="link13" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для тринадцатого дня</label>
                 <textarea name="text13" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 14</label>
+                <input type="text" name="link14" id="link14" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для четырнадцатого дня</label>
                 <textarea name="text14" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 15</label>
+                <input type="text" name="link15" id="link15" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для пятнадцатого дня</label>
                 <textarea name="text15" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 16</label>
+                <input type="text" name="link16" id="link16" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для шестнадцатого дня</label>
                 <textarea name="text16" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 17</label>
+                <input type="text" name="link17" id="link17" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для семнадцатого дня</label>
                 <textarea name="text17" id="text" class="form-control"></textarea><br>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 18</label>
+                <input type="text" name="link18" id="link18" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для восемнадцатого дня</label>
                 <textarea name="text18" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 19</label>
+                <input type="text" name="link19" id="link19" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для девятнадцатого дня</label>
                 <textarea name="text19" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 20</label>
+                <input type="text" name="link20" id="link20" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для двадцатого дня</label>
                 <textarea name="text20" id="text" class="form-control"></textarea><br>
                 </hr>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 21</label>
+                <input type="text" name="link21" id="link21" class="form-control"><br>
 
 
                 <label for="exampleFormControlInput1">Полное описание тренировки для двадцать первого дня</label>
                 <textarea name="text21" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 22</label>
+                <input type="text" name="link22" id="link22" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для двадцать второго дня</label>
                 <textarea name="text22" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 23</label>
+                <input type="text" name="link23" id="link23" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для двадцать третьего дня</label>
                 <textarea name="text23" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 24</label>
+                <input type="text" name="link24" id="link24" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для двадцать четвертого дня</label>
                 <textarea name="text24" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 25</label>
+                <input type="text" name="link25" id="link25" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для двадцать пятого дня</label>
                 <textarea name="text25" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 26</label>
+                <input type="text" name="link26" id="link26" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для двадцать шестого дня</label>
                 <textarea name="text26" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 27</label>
+                <input type="text" name="link27" id="link27" class="form-control"><br>
 
                 <label for="exampleFormControlInput1">Полное описание тренировки для двадцать седьмого дня</label>
                 <textarea name="text27" id="text" class="form-control"></textarea><br>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 28</label>
+                <input type="text" name="link28" id="link28" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для двадцать восьмого дня</label>
                 <textarea name="text28" id="text" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 29</label>
+                <input type="text" name="link29" id="link29" class="form-control"><br>
                 <label for="exampleFormControlInput1">Полное описание тренировки для двадцать девятого дня</label>
-                <textarea name="text29" id="text" class="form-control"></textarea><br>
+                <textarea name="text29" id="text29" class="form-control"></textarea><br>
                 <hr/>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 30</label>
+                <input type="text" name="link30" id="link30" class="form-control"><br>
 
                 <label for="exampleFormControlInput1">Полное описание тренировки для тридцатого дня</label>
-                <textarea name="text30" id="text" class="form-control"></textarea><br>
+                <textarea name="text30" id="text30" class="form-control"></textarea><br>
                 </hr>
-                <label for="exampleFormControlInput1">Полное описание тренировки для тридцат дня</label>
-                <textarea name="text31" id="text" class="form-control"></textarea><br>
+                <label for="exampleFormControlInput1">Ссылка на видео для дня 31</label>
+                <input type="text" name="link31" id="link31" class="form-control"><br>
+                <label for="exampleFormControlInput1">Полное описание тренировки для тридцать первого дня</label>
+                <textarea name="text31" id="text31" class="form-control"></textarea><br>
                 </hr>
             </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Укажите уровень сложности</label><br>
+                 <input type="radio" name="level" id ="easy" value="Легко" /> Легко </br>
+                 <input type="radio" name="level" id ="middle" value="Средний уровень" /> Средне </br>
+                <input type="radio" name="level" id ="hard" value="Сложно" /> Сложно </br>
+             </div>
+            </hr>
              <div class="form-group">
+                 <label for="exampleFormControlInput1">Укажите тип</label><br>
                  <input type="radio" name="who" id ="coach" value="free" /> Бесплатная </br>
                  <input type="radio" name="who" id ="sportsmen" value="paid" /> Платная </br>
              </div>
@@ -129,6 +204,7 @@
 
         </form>
 
-
+    </form>
     </div>
+
  {% endblock %}

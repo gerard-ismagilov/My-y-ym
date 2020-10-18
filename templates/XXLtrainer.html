@@ -35,11 +35,15 @@
                             <ul>
                                <a href="/treanersearchlog/{{ element.creators }}"><li>{{ element.creators }}</li></a>
                                 <li>{{ element.date.date() }}</li>
+                                <li>{{ element.level }}</li>
                                 <li>{{ element.type }}</li>
 
                             </ul>
+                            {% if element.linkintro != "https://www.youtube.com/embed/" %}
+                            <iframe width="360" height="215" src="{{ element.linkintro }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                             {% endif %}
                             <p>{{ element.intro }}</p>
-<a href="/XXLtreaning/{{ element.id }}" class="primary-btn">Подробнее</a>
+                            <a href="/XXLtreaning/{{ element.id }}" class="primary-btn">Подробнее</a>
                             {% if element.id in follower %}
 
                                 <a href="/XXLreject/{{ element.id }}" class="btn btn-sm btn-secondary">Удалить из добавленых</a>
