@@ -728,36 +728,39 @@ def upgatelink(id):
 @app.route("/updateart", methods=['POST', 'GET'])
 @login_required
 def update():
+    article = Article.query.get_or_404(session.get("linkupdate"))
     if request.method == 'POST':
-        title = request.form['title']
-        intro = request.form['intro']
-        text = request.form['text']
+        article.title = request.form['title']
+        article.intro = request.form['intro']
+        article.text = request.form['text']
         who = request.form['who']
         cost = request.form['cost']
-        level = request.form['level']
-        link = request.form['link']
-        linkintro = request.form['linkintro']
+        article.level = request.form['level']
+        article.link = request.form['link']
+        article.linkintro = request.form['linkintro']
         user = User.query.filter_by(login=session.get('login')).first()
         print(user.role_id)
+        print(who)
         if user.role_id == "sportsmen":
             return "Вы не тренер"
         if who == "free":
-            who = "Бесплатная"
-            cost = 0
+            article.who = "Бесплатная"
+            article.cost = 0
         else:
-            who = "Платная"
-        article = Article(title=title, intro=intro, text=text, creators=session.get('login'), type=who, cost=cost,
-                          level=level, link=linker(link), linkintro=linker(linkintro))
+            article.who = "Платная"
+            article.cost = int(cost)
+
         try:
-            db.session.add(article)
+            print(article.cost)
             db.session.commit()
             return redirect("/account")
         except:
-            return "При добавлении статьи произошла ошибка!"
+            print("error")
+
     else:
-        articles = Article.query.get_or_404(session.get("linkupdate"))
-        if articles.creators == session.get("login"):
-            return render_template("update.html", articles = articles)
+
+        if article.creators == session.get("login"):
+            return render_template("update.html", articles=article)
         return "Вы не создатель"
 
 @app.route("/create-blog", methods=['POST', 'GET'])
